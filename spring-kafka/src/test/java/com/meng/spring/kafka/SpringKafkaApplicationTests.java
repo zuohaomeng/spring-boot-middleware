@@ -1,10 +1,10 @@
-package com.meng.springboot.middleware;
+package com.meng.spring.kafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootMiddlewareApplicationTests {
+class SpringKafkaApplicationTests {
 
     @Test
     void contextLoads() {
