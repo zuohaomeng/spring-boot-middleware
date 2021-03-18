@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-sentinel3
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8887
+logging:
+  level:
+    root: info

@@ -5,6 +5,7 @@ import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.config.listener.Listener;
 import com.alibaba.nacos.api.exception.NacosException;
 
+import java.time.LocalDateTime;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
@@ -14,6 +15,7 @@ import java.util.concurrent.Executor;
  */
 public class NacosSDKConfig {
     public static void main(String[] args) {
+        LocalDateTime dateTime = LocalDateTime.now().minusDays(1);
         //连接到目标服务的地址
         //指定dataid、 groupid
         String serverAddr = "localhost:8848";
