@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @author ZuoHao
  * @date 2021/3/18
  */
-public class ProducerKafkaAsync extends Thread{
+public class ProducerKafkaAsync extends Thread {
     private final KafkaProducer<Integer, String> producer;
     private final String topic;
 
@@ -35,7 +35,7 @@ public class ProducerKafkaAsync extends Thread{
                 producer.send(new ProducerRecord<Integer, String>(topic, msg), new Callback() {
                     @Override
                     public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-                        System.out.println("callback:"+recordMetadata.offset()+"->"+recordMetadata.partition());
+                        System.out.println("callback:" + recordMetadata.offset() + "->" + recordMetadata.partition());
                     }
                 });
                 TimeUnit.SECONDS.sleep(2);
@@ -47,6 +47,9 @@ public class ProducerKafkaAsync extends Thread{
     }
 
     public static void main(String[] args) {
-        new ProducerKafkaAsync("test").start();
+        System.out.println("spring-kafka-consumer".hashCode()%50);
+        int s = Math.abs("test".hashCode())%50;
+        System.out.println(s);
+//        new ProducerKafkaAsync("test").start();
     }
 }
