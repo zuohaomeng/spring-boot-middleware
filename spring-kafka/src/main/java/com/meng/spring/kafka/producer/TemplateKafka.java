@@ -18,4 +18,6 @@ public class TemplateKafka {
     public void send() {
         kafkaTemplate.send("kafkatest", "msgKey", "msgData");
     }
+    public void sendTran(){
+    }
 }
